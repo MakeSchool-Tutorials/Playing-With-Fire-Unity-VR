@@ -91,3 +91,10 @@ Next we are going to make the actual fire texture have a higher emission rate, a
 
 You should have two fireballs hanging in your hands that you can wave around! Really cool huh!
 That is it!
+
+If you'd like to try a challenge to extend this project, try any of the following:
+
+- Make the fire shift through the colors of the rainbow!
+- Make the fire emit faster or slower depending on how quickly you move your hands
+- Make the fire briefly light the ground whenever it touches it!
+- Put the fire at the ends of chains you can swing around from your hands like [fire poi](https://en.wikipedia.org/wiki/Poi_(performance_art))!  (This one's pretty challenging!)
