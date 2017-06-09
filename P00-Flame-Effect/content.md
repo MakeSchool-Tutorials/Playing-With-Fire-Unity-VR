@@ -31,13 +31,19 @@ Click the "import" button to import once it downloads, and then "accept all" of 
 >
 ![YAY](assets/accepted.png)
 
+<!--  -->
+
+> [info]
+>
+You may get a message about a required API update. This is safe to run with SteamVR and Unity 5.6. Just accept it whenever importing SteamVR! You may also have to `Ignore` the `Show Unity Splash Screen` recommended setting that pops up (this depends on whether or not you are using the free version of Unity).
+
 # Setting up the playable area
 
 The glowing blue box will be your walking play area. You will be able to walk around this region and interact with objects inside of it.
 
 > [action]
 >
-From the `SteamVR/Prefabs` folder add a `Camera Rig` Prefab.
+From the `SteamVR/Prefabs` folder add a `Camera Rig` Prefab. Search for `SteamVR_UpdatePoses` in your assets and drag it onto `Camera (eye)` (it's nested under `[Camera Rig]/Camera (Head)`). You will likely have to do this every time you import a `SteamVR_Prefab` due to a current Unity change that Valve (the people who maintain `SteamVR`) has not fixed yet. You can check on the fixes status [here](https://github.com/ValveSoftware/steamvr_unity_plugin/pull/14).
 >
 ![Camera Rig added](assets/Capture2.png)
 
@@ -107,7 +113,7 @@ This makes the Particles children of the world, not the hands. When Particles ar
 >
 Change _all of_ the different subsystems to use World Space (this means the particles will stay stationary when you move your hand instead of following your hand)
 
-Next we are going to make the actual fire texture have a higher emission rate, and **Billboard** differently, so it looks more realistic while you move it around.
+Next we are going to make the actual `Flame` particles have a higher emission rate, and **Billboard** differently, so it looks more realistic while you move it around.
 
 > [info]
 >
@@ -119,7 +125,7 @@ Billboarding refers to the way an object faces. To Billboard means to always fac
 >
 Please change these settings to this:
 >
-- Emission Rate = 10
+- Emission > Rate Over Time = 10
 - Max Particles = 50
 - Render Mode = Billboard
 >
